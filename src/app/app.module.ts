@@ -1,16 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
-import { TestComponent } from './modules/test/test.component';
+import { ProductModule } from './modules/product/product.module';
+import { HttpClientModule } from '@angular/common/http';
+import { EffectsModule } from '@ngrx/effects';
+import { ProductEffects } from './store/product/effects';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    StoreModule.forRoot({}),
+    ProductModule,
+    HttpClientModule,
+    EffectsModule.forRoot([ProductEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
