@@ -1,15 +1,12 @@
 import { Action, createReducer, on, createFeatureSelector } from '@ngrx/store';
 import { productActions } from './action';
-import { initialState, ProductState } from './state';
-
+import { initialState } from './state';
+import { ProductState } from './model';
 const productReducer = createReducer(
     initialState,
-    on(productActions.getAllProducts, state => ({
+    on(productActions.getAllProductsSuccess, (state, action) => ({
         ...state,
-        products: [
-            {id: 1, name: 'Dong'},
-            {id: 2, name: 'Giang'}
-        ]
+        products: action.products
     })),
 );
 

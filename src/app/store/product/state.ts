@@ -1,6 +1,4 @@
-export interface ProductState {
-   products: Array<Object>,
-}
+import { ProductState } from './model';
 
 export const initialState: ProductState = {
     products: [],
