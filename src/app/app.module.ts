@@ -5,18 +5,21 @@ import { AppComponent } from './app.component';
 import { ProductModule } from './modules/product/product.module';
 import { HttpClientModule } from '@angular/common/http';
 import { EffectsModule } from '@ngrx/effects';
-import { ProductEffects } from './store/product/effects';
+import { MyCounterComponent } from './my-counter/my-counter.component';
+import { RootStoreModule } from './store/';
 
 @NgModule({
   declarations: [
     AppComponent,
+    MyCounterComponent,
   ],
   imports: [
     BrowserModule,
     StoreModule.forRoot({}),
     ProductModule,
     HttpClientModule,
-    EffectsModule.forRoot([ProductEffects])
+    EffectsModule.forRoot([]),
+    RootStoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

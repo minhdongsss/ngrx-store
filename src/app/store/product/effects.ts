@@ -5,7 +5,7 @@ import { of } from 'rxjs';
 import { map, mergeMap, catchError } from 'rxjs/operators';
 import { ProductsService } from '../../services/product/products.service';
 import CONST from './const';
-import { productActions } from './action';
+import { productActions } from './actions';
 
 @Injectable()
 export class ProductEffects {
@@ -13,7 +13,9 @@ export class ProductEffects {
     ofType(CONST._ACTION.GET_ALL),
     mergeMap(() => this.productsService.getAll()
       .pipe(
-        map(products => productActions.getAllProductsSuccess({ products })),
+        map(products => {
+          return productActions.getAllProductsSuccess({ products })
+        }),
         catchError(() => of({ type: CONST._ACTION.GET_ALL_FAIL }))
       ))
     ),

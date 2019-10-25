@@ -1,5 +1,6 @@
-import { createSelector } from '@ngrx/store';
-import { ProductState } from './model';
+import { createSelector, createFeatureSelector } from '@ngrx/store';
+import { ProductState } from './state';
+export const featureKey = 'products';
+export const selectProducts = createFeatureSelector<ProductState>(featureKey);
 
-export const selectProducts = (state: ProductState) => state.products;
-export const selectorProducts = createSelector(selectProducts, null);
+export const selectorProducts = createSelector(selectProducts, ({ products }) => products);

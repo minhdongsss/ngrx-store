@@ -12,8 +12,9 @@ import * as productStore from '../../store/product/reducer';
   declarations: [ProductComponent, ProductDetailComponent, ProductItemComponent],
   imports: [
     CommonModule,
-    StoreModule.forFeature(productStore.MODULE_NAME, productStore.reducer),
+    StoreModule.forFeature(productStore.FEATURE_NAME, productStore.reducer),
     EffectsModule.forFeature([ProductEffects])
-  ]
+  ],
+  exports: [ProductComponent, ProductDetailComponent, ProductItemComponent]
 })
 export class ProductModule { }
