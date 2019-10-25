@@ -2,23 +2,28 @@
   "products": [
     {
       "id": "1",
-      "name": "Clothes"
+      "name": "Clothes",
+      "description": "Clothes description"
     },
     {
       "id": "2",
-      "name": "Cacao"
+      "name": "Cacao",
+      "description": "Cacao description"
     },
     {
       "id": "3",
-      "name": "Sugar"
+      "name": "Sugar",
+      "description": "Sugar description"
     },
     {
       "id": "4",
-      "name": "Watermelon"
+      "name": "Watermelon",
+      "description": "Watermelon description"
     },
     {
       "id": "5",
-      "name": "Machine"
+      "name": "Machine",
+      "description": "Machine description"
     }
   ]
 }

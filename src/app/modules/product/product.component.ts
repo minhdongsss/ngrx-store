@@ -22,6 +22,10 @@ export class ProductComponent implements OnInit {
     this.store.select(selectorProducts).subscribe(products => this.products = products);
   }
 
+  detailView() {
+    
+  }
+
   actionGetProducts() {
     this.store.dispatch(productActions.getAllProducts());
     this.getProducts();

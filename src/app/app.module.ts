@@ -7,6 +7,7 @@ import { ProductModule } from './modules/product/product.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MyCounterComponent } from './my-counter/my-counter.component';
 import { RootStoreModule } from './store/';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { RootStoreModule } from './store/';
     // StoreModule.forRoot({}),
     // EffectsModule.forRoot([]),
     RootStoreModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

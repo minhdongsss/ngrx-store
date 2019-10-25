@@ -1,6 +1,10 @@
 <button (click)="actionGetProducts()">GET PRODUCTS</button>
 <div *ngIf="products">
     <ul *ngFor="let product of products">
-        <li>{{ product.name }}</li>
+        <li>
+            <a [routerLink]="['/product-detail/1']" routerLinkActive="router-link-active">
+                {{ product.name }}
+            </a>
+        </li>
     </ul>
 </div>
