@@ -1,4 +1,4 @@
-<p>product works!</p>
+<button (click)="actionGetProducts()">GET PRODUCTS</button>
 <div *ngIf="products">
     <ul *ngFor="let product of products">
         <li>{{ product.name }}</li>
