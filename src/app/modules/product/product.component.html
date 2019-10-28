@@ -2,7 +2,7 @@
 <div *ngIf="products">
     <ul *ngFor="let product of products">
         <li>
-            <a [routerLink]="['/product-detail/1']" routerLinkActive="router-link-active">
+            <a [routerLink]="['/products/product-detail', product.id]">
                 {{ product.name }}
             </a>
         </li>
