@@ -1,0 +1,12 @@
+<div *ngIf="products">
+    <ul style="display: flex; flex-direction: column; align-items: space-between; width: 150px">
+        <li *ngFor="let product of products">
+            <a [routerLink]="['/products/product-detail', product.id]">
+                {{ product.name }}
+            </a>
+            <button (click)="showEdit(product.id)" style="margin-left: 20px;">Edit</button>
+        </li>
+    </ul>
+    <input type="text" name="" id="" *ngIf="isEdit" [(ngModel)]="nameProduct">
+    <button (click)="submit()" *ngIf="isEdit">Submit</button>
+</div>

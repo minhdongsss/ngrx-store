@@ -9,5 +9,13 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
   getAll() {
     return this.http.get('http://localhost:3000/products');
+  };
+
+  getDetail(id) {
+    return this.http.get(`http://localhost:3000/products/${id}`)
+  };
+
+  editProduct(id, name) {
+    return this.http.put(`http://localhost:3000/products/${id}`, { name });
   }
 }

@@ -1,10 +1,1 @@
-<button (click)="actionGetProducts()">GET PRODUCTS</button>
-<div *ngIf="products">
-    <ul *ngFor="let product of products">
-        <li>
-            <a [routerLink]="['/products/product-detail', product.id]">
-                {{ product.name }}
-            </a>
-        </li>
-    </ul>
-</div>
+<router-outlet></router-outlet>

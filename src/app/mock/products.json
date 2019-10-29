@@ -1,29 +1,24 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Clothes",
-      "description": "Clothes description"
+      "name": "123",
+      "id": "1"
     },
     {
-      "id": "2",
-      "name": "Cacao",
-      "description": "Cacao description"
+      "name": "sdsdse",
+      "id": "2"
     },
     {
-      "id": "3",
-      "name": "Sugar",
-      "description": "Sugar description"
+      "name": "1",
+      "id": "3"
     },
     {
-      "id": "4",
-      "name": "Watermelon",
-      "description": "Watermelon description"
+      "name": "2222",
+      "id": "4"
     },
     {
-      "id": "5",
-      "name": "Machine",
-      "description": "Machine description"
+      "name": "12",
+      "id": "5"
     }
   ]
 }
